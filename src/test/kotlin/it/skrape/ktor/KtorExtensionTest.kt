@@ -1,5 +1,8 @@
 package it.skrape.ktor
 
+import assertk.assertAll
+import assertk.assertThat
+import assertk.assertions.isEqualTo
 import com.nhaarman.mockitokotlin2.doReturn
 import com.nhaarman.mockitokotlin2.mock
 import io.ktor.server.testing.TestApplicationResponse
@@ -16,7 +19,7 @@ import org.junit.jupiter.api.Test
 internal class KtorExtensionTest {
 
     private val aValidHtmlString = """
-        <html>
+        <expectHtml>
             <head>
                 <title>i'm the title</title>
             </head>
@@ -28,7 +31,7 @@ internal class KtorExtensionTest {
                     <li>item3</li>
                 </ul>
             </body>
-        </html>
+        </expectHtml>
     """.trimIndent()
 
     @Test
@@ -38,12 +41,26 @@ internal class KtorExtensionTest {
             on { content } doReturn aValidHtmlString
         }
 
-        response.html {
+        response.expectHtml {
             title() toBe "i'm the title"
             element("h1").text() toBe "headline"
             elements("li").size toBe 3
             element("body").toBePresent()
             elements(".not-existing").toBeNotPresent()
+        }
+    }
+
+    @Test
+    fun `can store a parsed TestApplicationResponse's content`() {
+
+        val response = mock<TestApplicationResponse> {
+            on { content } doReturn aValidHtmlString
+        }
+
+        val doc = response.expectHtml {}
+        assertAll {
+            assertThat(doc.title()).isEqualTo("i'm the title")
+            assertThat(doc.select("h1")).isEqualTo("headline")
         }
     }
 
@@ -54,7 +71,7 @@ internal class KtorExtensionTest {
             on { content } doReturn null
         }
         Assertions.assertThrows(IllegalArgumentException::class.java) {
-            response.html {}
+            response.expectHtml {}
         }
     }
 
