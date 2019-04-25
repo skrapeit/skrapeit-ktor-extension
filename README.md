@@ -7,6 +7,7 @@
 [![JDK](https://img.shields.io/badge/jdk-8-green.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 [![master build status](https://img.shields.io/travis/skrapeit/skrapeit-ktor-extension.svg?label=master)](https://travis-ci.org/skrapeit/skrapeit-ktor-extension)
+[![Codecov](https://img.shields.io/codecov/c/github/skrapeit/skrapeit-ktor-extension.svg)](https://codecov.io/gh/skrapeit/skrapeit-ktor-extension)
 [![Known Vulnerabilities](https://snyk.io/test/github/skrapeit/skrapeit-ktor-extension/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/skrapeit/skrapeit-ktor-extension?targetFile=pom.xml)
 [![Awesome Kotlin Badge](https://kotlin.link/awesome-kotlin.svg)](https://github.com/KotlinBy/awesome-kotlin)
 
