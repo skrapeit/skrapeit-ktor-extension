@@ -23,19 +23,19 @@ bound to a specific test runner.
 
 ### Setup
 > Gradle (Kotlin DSL):
->```
+>```kotlin
 >testCompile("it.skrape:skrapeit-core:+")
 >testCompile("it.skrape:skrapeit-ktor:+")
 >```
 
 > Gradle (Groovy DSL):
->```
+>```groovy
 >testCompile "it.skrape:skrapeit-core:+"
 >testCompile "it.skrape:skrapeit-ktor:+"
 >```
 
 > Maven:
->```
+>```xml
 ><dependency>
 >   <groupId>it.skrape</groupId>
 >   <artifactId>skrapeit-core</artifactId>
