@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>it.skrape</groupId>
+        <artifactId>skrapeit-parent</artifactId>
+        <version>0.1.0</version>
+    </parent>
+
+    <artifactId>skrapeit-ktor</artifactId>
+    <version>1.0.0</version>
+
+    <name>skrape{it} Ktor Extension</name>
+
+    <description>
+        An Extension to test Ktor endpoints that produces HTML in a meaningful way by the use of skrape{it}.
+    </description>
+    <url>https://docs.skrape.it</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Christian Dräger</name>
+            <email>christian.draeger1@gmail.com</email>
+            <url>https://github.com/christian-draeger</url>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/skrapeit/skrapeit-ktor-extension/issues</url>
+    </issueManagement>
+
+    <scm>
+        <connection>scm:git:git://github.com/skrapeit/skrapeit-ktor-extension.git</connection>
+        <developerConnection>scm:git:ssh://github.com:skrapeit/skrapeit-ktor-extension.git</developerConnection>
+        <url>https://github.com/skrapeit/skrapeit-ktor-extension/tree/master</url>
+    </scm>
+
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>it.skrape</groupId>
+            <artifactId>skrapeit-core</artifactId>
+            <version>LATEST</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.ktor</groupId>
+            <artifactId>ktor-server-test-host</artifactId>
+            <version>LATEST</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>
