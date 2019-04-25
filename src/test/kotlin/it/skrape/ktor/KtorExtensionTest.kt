@@ -12,7 +12,6 @@ import it.skrape.matchers.toBePresent
 import it.skrape.selects.element
 import it.skrape.selects.elements
 import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 internal class KtorExtensionTest {
@@ -59,7 +58,7 @@ internal class KtorExtensionTest {
         val doc = response.expectHtml {}
         assertAll {
             assertThat(doc.title()).isEqualTo("i'm the title")
-            assertThat(doc.select("h1")).isEqualTo("headline")
+            assertThat(doc.select("h1").text()).isEqualTo("headline")
         }
     }
 
