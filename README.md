@@ -22,6 +22,10 @@ It places particular emphasis on ease of use, a high level of readability,
 attention to performance through the use of non-blocking operations and is not 
 bound to a specific test runner.
 
+### Example
+
+![example-usage](example-usage.gif "Documentation by example")
+
 ### Setup
 > Gradle (Kotlin DSL):
 >```kotlin
