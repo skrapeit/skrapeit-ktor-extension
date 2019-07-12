@@ -9,6 +9,8 @@
 [![master build status](https://img.shields.io/travis/skrapeit/skrapeit-ktor-extension.svg?label=master)](https://travis-ci.org/skrapeit/skrapeit-ktor-extension)
 [![Codecov](https://img.shields.io/codecov/c/github/skrapeit/skrapeit-ktor-extension.svg)](https://codecov.io/gh/skrapeit/skrapeit-ktor-extension)
 [![Known Vulnerabilities](https://snyk.io/test/github/skrapeit/skrapeit-ktor-extension/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/skrapeit/skrapeit-ktor-extension?targetFile=pom.xml)
+
+[![Donate](https://img.shields.io/badge/-donate-blue.svg?logo=paypal)](https://www.paypal.me/skrapeit)
 [![Awesome Kotlin Badge](https://kotlin.link/awesome-kotlin.svg)](https://github.com/KotlinBy/awesome-kotlin)
 
 [skrape{it} Ktor Extension](https://docs.skrape.it)
